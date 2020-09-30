@@ -6,6 +6,7 @@ var app = express();
 var PORT = process.env.PORT || 25789;
 
 app.use(express.urlencoded({ extended: true }));
+app.use(express.static(__dirname + "/public"))
 app.use(express.json());
 
 app.get("", function (req, res) {
@@ -19,6 +20,12 @@ app.get("/notes", function (req, res) {
 app.get("/api/notes", function (req, res) {
     const notes = fs.readFileSync(__dirname+"/db/db.json");
     return res.json(notes);
+});
+
+app.post("/api/notes", function (req, res) {
+    var newNote = req.body;
+    console.log(newNote);
+    res.json(newNote);
 })
 
 app.listen(PORT, function () {
