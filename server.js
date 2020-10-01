@@ -33,18 +33,14 @@ app.post("/api/notes", function (req, res) {
   fs.readFile(__dirname + "/db/db.json", "utf8", function (err, data) {
     if (err) throw err;
     allNotes = JSON.parse(data);
-    console.log("this is all notes:", allNotes);
     for (let i = 0; i < allNotes.length; i++) {
       if (allNotes[i].id > id) {
         id = allNotes[i].id;
-        console.log("this is id in for loop:", id)
       }
     }
     newNote.id = parseInt(id) + 1;
-    console.log("This is id after the for loop:", id)
-    console.log(newNote)
     allNotes.push(newNote);
-    
+
     fs.writeFile(
       __dirname + "/db/db.json",
       JSON.stringify(allNotes),
@@ -57,18 +53,7 @@ app.post("/api/notes", function (req, res) {
 });
 
 app.delete("/api/notes/:id", function (req, res) {
-  for (let i = 0; allNotes.length; i++) {
-    if (allNotes[i].id === req.params.id) {
-      allNotes.splice(i, 1);
-      break;
-    }
-  }
-  fs.writeFile(__dirname + "/db/db.json", JSON.stringify(allNotes), function (
-    err
-  ) {
-    if (err) throw err;
-    console.log(`The note with id ${req.params.id} has been deleted.`);
-  });
+  const deleteID = req.params.id;
 });
 
 app.listen(PORT, function (req, res) {
