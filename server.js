@@ -1,12 +1,9 @@
 const express = require("express");
 const path = require("path");
 const fs = require("fs");
-const notesTaken = require("./db/db.json");
 
 const app = express();
 const PORT = process.env.PORT || 25789;
-
-let allNotes = [...notesTaken];
 
 app.use(express.urlencoded({ extended: true }));
 // app.use(express.json());
@@ -31,28 +28,23 @@ app.get("/api/notes", function (req, res) {
 
 app.post("/api/notes", function (req, res) {
   var newNote = req.body;
-  // var noteTitle = req.body.title;
-  // var noteText = req.body.text;
-  // console.log("Note title: " + noteTitle);
-  // console.log("Note text :" + noteText);
-  // console.log("newNote before", newNote);
+  let allNotes = [];
   let id = 0;
-  for (let i = 0; i < allNotes.length; i++) {
-    if (allNotes[i].id > id) {
-      // console.log("This is id", id);
-      // console.log("this is index", allNotes[i].id)
-      id = allNotes[i].id;
-    }
-  }
-  newNote.id = parseInt(id) + 1;
-  // console.log("newNote after", newNote);
-  // console.log(newNote)
-  // console.log(id)
-
   fs.readFile(__dirname + "/db/db.json", "utf8", function (err, data) {
     if (err) throw err;
     allNotes = JSON.parse(data);
+    console.log("this is all notes:", allNotes);
+    for (let i = 0; i < allNotes.length; i++) {
+      if (allNotes[i].id > id) {
+        id = allNotes[i].id;
+        console.log("this is id in for loop:", id)
+      }
+    }
+    newNote.id = parseInt(id) + 1;
+    console.log("This is id after the for loop:", id)
+    console.log(newNote)
     allNotes.push(newNote);
+    
     fs.writeFile(
       __dirname + "/db/db.json",
       JSON.stringify(allNotes),
