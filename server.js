@@ -9,10 +9,6 @@ app.use(express.urlencoded({ extended: true }));
 // app.use(express.json());
 app.use(express.static(__dirname + "/public"));
 
-app.get("/", function (req, res) {
-  res.sendFile(path.join(__dirname + "/public", "index.html"));
-});
-
 app.get("/notes", function (req, res) {
   res.sendFile(path.join(__dirname + "/public", "notes.html"));
 });
@@ -24,6 +20,10 @@ app.get("/api/notes", function (req, res) {
     // console.log(notes);
     return res.json(notes);
   });
+});
+
+app.get("*", function (req, res) {
+  res.sendFile(path.join(__dirname + "/public", "index.html"));
 });
 
 app.post("/api/notes", function (req, res) {
@@ -54,6 +54,21 @@ app.post("/api/notes", function (req, res) {
 
 app.delete("/api/notes/:id", function (req, res) {
   const deleteID = req.params.id;
+
+  fs.readFile(__dirname + "/db/db.json", "utf8", function (err, data) {
+    if (err) throw err;
+    data.filter = (entry) => {
+      return entry.id !== deleteID;
+    };
+    fs.writeFile(
+      __dirname + "/db/db.json",
+      JSON.stringify(data),
+      "utf8",
+      function (err) {
+        if (err) throw err;
+      }
+    );
+  });
 });
 
 app.listen(PORT, function (req, res) {
