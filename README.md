@@ -33,7 +33,7 @@ Or, check out the [Express.js Note Taker](https://whispering-headland-90384.hero
 
 1. **SERVER** and associated **ROUTE** files walk through:
 
-[![EXPRSS.js NOTE TAKER server](./public/screenshots/note-taker-serever.png)](https://drive.google.com/file/d/1K6HMZc4qwlUNzklimnEBu5qfJJLA7t9R/preview)
+[![EXPRSS.js NOTE TAKER server](./public/assets/screenshots/note-taker-serever.png)](https://drive.google.com/file/d/1K6HMZc4qwlUNzklimnEBu5qfJJLA7t9R/preview)
 
 2. **NOTE TAKER** walk through: 
 
