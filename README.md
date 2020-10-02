@@ -37,7 +37,7 @@ Or, check out the [Express.js Note Taker](https://whispering-headland-90384.hero
 
 2. **NOTE TAKER** walk through: 
 
-
+[![EXPRSS.js NOTE TAKER server](./public/assets/screenshots/note-taker-heroku.png)](https://drive.google.com/file/d/1VFC9B7_u3RG2i9mWUh2-o18l7OVD-7Fi/preview)
 
 ## Guidelines for Contributing
 
