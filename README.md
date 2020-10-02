@@ -31,6 +31,14 @@ From VSCode press "ctrl + `" to open the terminal.  Next, enter "node server" in
 
 Or, check out the [Express.js Note Taker](https://whispering-headland-90384.herokuapp.com) that is hosted on <a target="_blank" rel="noopener noreferrer">[Heroku](www.heroku.com).</a>.
 
+1. **SERVER** and associated **ROUTE** files walk through:
+
+[![EXPRSS.js NOTE TAKER server](./public/screenshots/note-taker-serever.png)](https://drive.google.com/file/d/1K6HMZc4qwlUNzklimnEBu5qfJJLA7t9R/preview)
+
+2. **NOTE TAKER** walk through: 
+
+
+
 ## Guidelines for Contributing
 
 The next step in this project is creating an option to perform PUT requests that allow for the editing of previously submitted notes.  
