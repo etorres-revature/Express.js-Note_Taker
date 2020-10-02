@@ -5,7 +5,7 @@
 
 ## Project Description
 
-This application uses web technologies to create an application that writes, saves, and deletes notes.  The user navigates to the home page and clicks the "Get Started" button.  From here, notes can be entered, saved, and deleted dynamically using HTML, CSS, and Bootstrap to display information; NODE.js as the runtime environment; and Express.js as the server.
+This application uses web technologies to create an app that writes, saves, and deletes notes.  The user navigates to the home page and clicks the "Get Started" button.  From here, notes can be entered, saved, and deleted dynamically using HTML, CSS, and Bootstrap to display information; NODE.js as the runtime environment; and Express.js as the server.
 
 ## Table of Contents
 
@@ -27,11 +27,15 @@ Navigate to the [Express.js Note Taker](https://github.com/etorres-revature/Expr
 
 ## Usage 
 
-From VSCode press "ctrl + `".  Enter "node server" in the terminal.  From your web browser, navigate to "localhost:25789".  Or, check out the [Express.js Note Taker](https://whispering-headland-90384.herokuapp.com) that is hosted on [Heroku](www.heroku.com).
+From VSCode press "ctrl + `" to open the terminal.  Next, enter "node server" in the terminal.  Then, from your web browser, navigate to "localhost:25789".  
+
+Or, check out the [Express.js Note Taker](https://whispering-headland-90384.herokuapp.com) that is hosted on <a target="_blank" rel="noopener noreferrer">[Heroku](www.heroku.com).</a>.
 
 ## Guidelines for Contributing
 
-The next step in this project is creating an option to perform PUT requests that allow for the editing of previously submitted notes.  If you have any ideas for other future updates, please contact me at the e-mail address below.
+The next step in this project is creating an option to perform PUT requests that allow for the editing of previously submitted notes.  
+
+If you have any further ideas for other future updates, please contact me at the e-mail address below.
 
 ## Tests
 
@@ -76,7 +80,7 @@ Separation of formating and content also makes it feasible to present the same m
 
 #### :satellite: Express.js :satellite:
 
-**Express.js** is a minimal and flexible NODE.js web application framework tat provides a robust set of features for web and mobile applications.  The myriad HTTP utility methods and middleware allow for the creation of a robust API.  Express.js provides a thin layer of fundamental features, without obscuring NODE.js features.
+**Express.js** is a minimal and flexible NODE.js web application framework that provides a robust set of features for web and mobile applications.  The myriad HTTP utility methods and middleware allow for the creation of a robust API.  Express.js provides a thin layer of fundamental features, without obscuring NODE.js features.
 
 *Express.js* content borrowed from <a target="_blank" rel="noopener noreferrer">[this page](https://expressjs.com/).</a>
 
@@ -94,4 +98,4 @@ You can contact me by e-mail at etorresnotary@gmail.com for any additional quest
 
 [This application uses the **MIT License** found here](./LICENSE).
 
-**[This README.md file generated with my NODE.js README Generator app.](https://github.com/etorres-revature/NODEjs_README.md_Generator)
+**[This README.md file generated with my NODE.js README Generator app.](https://github.com/etorres-revature/NODEjs_README.md_Generator)**
