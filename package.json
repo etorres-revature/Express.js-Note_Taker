@@ -1,13 +1,14 @@
 {
   "name": "note-taker",
   "version": "1.0.0",
-  "description": "",
+  "description": "This application utilizes HTML5, CSS, Bootstrap 4, JavaScript, NODE.js, and Express.js to display and route information for the taking and persisting of notes input by the user.",
   "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1", 
+    "start": "node server.js"
   },
-  "author": "",
-  "license": "ISC",
+  "author": "Eric D. Torres",
+  "license": "MIT",
   "dependencies": {
     "express": "^4.16.4"
   }
