@@ -1,9 +1,9 @@
 //require the file system built-in library for NODE.js
 const fs = require("fs");
 
-module.exports = function (app) {
+module.exports = (app) => {
   // * GET `/api/notes` - Should read the `db.json` file and return all saved notes as JSON.
-  app.get("/api/notes", function (req, res) {
+  app.get("/api/notes", (req, res) => {
     //read the db.json file to get all notes
     fs.readFile(__dirname + "/../db/db.json", (err, data) => {
       //error handling
@@ -16,7 +16,7 @@ module.exports = function (app) {
   });
 
   //* POST `/api/notes` - Should receive a new note to save on the request body, add it to the `db.json` file, and then return the new note to the client.
-  app.post("/api/notes", function (req, res) {
+  app.post("/api/notes", (req, res) => {
     //create variable to hold the body with information entered by the user
     const newNote = req.body;
     //empty array to hold the notes in the db.json file
@@ -48,7 +48,7 @@ module.exports = function (app) {
         //stringify the JSON array
         JSON.stringify(allNotes),
         "utf8",
-        function (err) {
+        (err) => {
           //error handling
           if (err) throw err;
           //telling the program that the function is over
@@ -59,7 +59,7 @@ module.exports = function (app) {
   });
 
   //* DELETE `/api/notes/:id` - Should receive a query parameter containing the id of a note to delete.
-  app.delete("/api/notes/:id", function (req, res) {
+  app.delete("/api/notes/:id", (req, res) => {
     //taking in the id from the note selected to be deleted
     const deleteID = req.params.id;
     //read the db.json fil
@@ -77,7 +77,7 @@ module.exports = function (app) {
         //stringify the JSON array
         JSON.stringify(deleteNote),
         "utf8",
-        function (err) {
+        (err) => {
           //error handling
           if (err) throw err;
           //telling the program that the function is over
