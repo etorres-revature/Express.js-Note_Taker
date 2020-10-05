@@ -9,7 +9,7 @@ module.exports = function (app) {
       //error handling
       if (err) throw err;
       //parse the JSON in db.json
-      let notes = JSON.parse(data);
+      const notes = JSON.parse(data);
       //return the parsed information in the notes variable to display on screen to user
       return res.json(notes);
     });
