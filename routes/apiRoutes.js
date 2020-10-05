@@ -1,6 +1,5 @@
 //require the file system built-in library for NODE.js
 const fs = require("fs");
-const createID = require("../idGenerator");
 
 module.exports = function (app) {
   // * GET `/api/notes` - Should read the `db.json` file and return all saved notes as JSON.
@@ -23,7 +22,7 @@ module.exports = function (app) {
     //empty array to hold the notes in the db.json file
     let allNotes = [];
     //variable for the id - using the idGenerator module that is exported/required
-    let id = createID();
+    let id = 0;
     //read the db.json file
     fs.readFile(__dirname + "/../db/db.json", "utf8", (err, data) => {
       //error handling
@@ -31,15 +30,16 @@ module.exports = function (app) {
       //parsing the JSON data and setting it as the value for the empty array
       allNotes = JSON.parse(data);
       //for loop to go through all of the objects in the db.json array
-      // for (let i = 0; i < allNotes.length; i++) {
+      for (let i = 0; i < allNotes.length; i++) {
         //if logic to compare the current value of the id variable with the values of the ids in the array of object in db.json
-        // if (allNotes[i].id > id) {
+        if (allNotes[i].id > id) {
           //if the objects id is greater than the current value of id setting the id variable to the id of the object
           //this logic will find the highest id value in the array of objects and set it to the id variable
-          // id = allNotes[i].id;
-        // }}
+          id = allNotes[i].id;
+        }
+      }
       //setting the id for the new note to the highest value of the id in the array of objects in db.json and adding one
-      newNote.id = id;
+      newNote.id = parseInt(id) + 1;
       //pushing the new note information onto the allNotes array
       allNotes.push(newNote);
       //write the db.json file with the new array of notes including the user entered informaiton in the body of the request

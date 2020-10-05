@@ -6,7 +6,7 @@ const app = express();
 const PORT = process.env.PORT || 25789;
 
 //middleware for url encoding, json, and static display of HTML
-app.use(express.urlencoded({ extended: true }));
+app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
 app.use(express.static(__dirname + "/public"));
 
