@@ -31,6 +31,8 @@ From VSCode press "ctrl + `" to open the terminal.  Next, enter "node server" in
 
 Or, check out the [Express.js Note Taker](https://whispering-headland-90384.herokuapp.com) that is hosted on <a target="_blank" rel="noopener noreferrer">[Heroku](www.heroku.com).</a>.
 
+Here are two :movie_camera: **VIDEOS** :movie_camera: that display how to use the application.
+
 1. **SERVER** and associated **ROUTE** files walk through:
 
 [![EXPRSS.js NOTE TAKER server](./public/assets/screenshots/note-taker-server.png)](https://drive.google.com/file/d/1K6HMZc4qwlUNzklimnEBu5qfJJLA7t9R/preview)
