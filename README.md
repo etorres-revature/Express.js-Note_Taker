@@ -35,11 +35,11 @@ Here are two :movie_camera: **VIDEOS** :movie_camera: that display how to use th
 
 1. **SERVER** and associated **ROUTE** files walk through:
 
-[![EXPRSS.js NOTE TAKER server](./public/assets/screenshots/note-taker-server.png)](https://drive.google.com/file/d/1K6HMZc4qwlUNzklimnEBu5qfJJLA7t9R/preview)
+[![EXPRESS.js NOTE TAKER server](./public/assets/screenshots/note-taker-server.png)](https://drive.google.com/file/d/1K6HMZc4qwlUNzklimnEBu5qfJJLA7t9R/preview)
 
 2. **NOTE TAKER** walk through: 
 
-[![EXPRSS.js NOTE TAKER server](./public/assets/screenshots/note-taker-heroku.png)](https://drive.google.com/file/d/1VFC9B7_u3RG2i9mWUh2-o18l7OVD-7Fi/preview)
+[![EXPRESS.js NOTE TAKER server](./public/assets/screenshots/note-taker-heroku.png)](https://drive.google.com/file/d/1VFC9B7_u3RG2i9mWUh2-o18l7OVD-7Fi/preview)
 
 ## Guidelines for Contributing
 
@@ -70,7 +70,7 @@ Separation of formatting and content also makes it feasible to present the same 
 
 #### :shoe: Bootstrap 4 :shoe:
 
-**Bootstrtap 4** is a free and open-source CSS framework directed at responsive, mobile-first front-end web development.  It contains CSS and (optionally) JavaScript-based design templates for typography, forms, buttons, navigation, and other interface components.  
+**Bootstrap 4** is a free and open-source CSS framework directed at responsive, mobile-first front-end web development.  It contains CSS and (optionally) JavaScript-based design templates for typography, forms, buttons, navigation, and other interface components.  
 
 *Bootstrap 4* content borrowed from <a target="_blank" rel="noopener noreferrer">[this page](https://en.wikipedia.org/wiki/Bootstrap_(front-end_framework)).</a>
 
