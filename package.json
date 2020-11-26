@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "This application utilizes HTML5, CSS, Bootstrap 4, JavaScript, NODE.js, and Express.js to display and route information for the taking and persisting of notes input by the user.",
   "main": "server.js",
+  "homepage": "https://whispering-headland-90384.herokuapp.com/",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "prestart": "npm run webpack --watch",
